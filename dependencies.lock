@@ -1,0 +1,87 @@
+dependencies:
+  espressif/cmake_utilities:
+    component_hash: 351350613ceafba240b761b4ea991e0f231ac7a9f59a9ee901f751bddc0bb18f
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.1'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 0.5.3
+  espressif/esp_lvgl_port:
+    component_hash: 41806031d90c91d50512d6f335f73978a1dd1aa1100ef5db40e189610be991ac
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.4'
+    - name: lvgl/lvgl
+      registry_url: https://components.espressif.com
+      require: public
+      version: '>=8,<10'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 2.4.3
+  espressif/keyboard_button:
+    component_hash: 66e3953901b2a1489a50b0c8df8a86eedc442139e6de5695263b724b1e24fd42
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    - name: espressif/cmake_utilities
+      registry_url: https://components.espressif.com
+      require: private
+      version: 0.*
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.0.0
+  espressif/led_indicator:
+    component_hash: f1fbe20fba9313986c32b1b6b7a4ae4822103ab928b51e9bd77215470cb70d98
+    dependencies:
+    - name: espressif/led_strip
+      registry_url: https://components.espressif.com
+      require: public
+      version: 2.5.5
+    - name: idf
+      require: private
+      version: '>=4.0'
+    - name: espressif/cmake_utilities
+      registry_url: https://components.espressif.com
+      require: private
+      version: 0.*
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.0.0
+  espressif/led_strip:
+    component_hash: 28c6509a727ef74925b372ed404772aeedf11cce10b78c3f69b3c66799095e2d
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.4'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 2.5.5
+  idf:
+    source:
+      type: idf
+    version: 5.3.2
+  lvgl/lvgl:
+    component_hash: d7c1ac037ae6e85d94897f807d6e7ba0946a83e720074fc95a4f6241da9f9f53
+    dependencies: []
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 8.4.0
+direct_dependencies:
+- espressif/esp_lvgl_port
+- espressif/keyboard_button
+- espressif/led_indicator
+- idf
+- lvgl/lvgl
+manifest_hash: 54f4f5edc911c94380ad6efb42044641603687c9c651e7b9577c824ab4d21096
+target: esp32s3
+version: 2.0.0
