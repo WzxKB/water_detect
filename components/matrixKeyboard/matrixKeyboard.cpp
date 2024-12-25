@@ -1,19 +1,50 @@
 #include <stdio.h>
 #include "matrixKeyboard.h"
+#include "string"
+#include "array"
+#include "iostream"
 
 static const char *TAG = "matrixKeyboard";
 
-static void keyboard_cb(keyboard_btn_handle_t kbd_handle, keyboard_btn_report_t kbd_report, void *user_data)
+// 定义一个函数返回二维数组中的某个字符串元素
+static std::string getKeyItem(const std::array<std::array<std::string, 4>, 4> &key_arr, int row, int col)
 {
+    if (row < 0 || row >= 4 || col < 0 || col >= 4)
+    {
+        throw std::out_of_range("Index out of range");
+    }
+    return key_arr[col][row];
+}
+
+static std::string key_map_string(int output_index, int input_index)
+{
+    std::array<std::array<std::string, 4>, 4> key_arr =
+        {{
+            {"1", "2", "3", "A"},
+            {"4", "5", "6", "B"},
+            {"7", "8", "9", "C"},
+            {"*", "0", "#", "D"},
+
+        }};
+    return getKeyItem(key_arr, output_index, input_index);
+}
+
+static void
+keyboard_cb(keyboard_btn_handle_t kbd_handle, keyboard_btn_report_t kbd_report, void *user_data)
+{
+
     if (kbd_report.key_pressed_num == 0)
     {
         ESP_LOGI(TAG, "All keys released\n\n");
         return;
     }
+
     printf("pressed: ");
     for (int i = 0; i < kbd_report.key_pressed_num; i++)
     {
         printf("(%d,%d) ", kbd_report.key_data[i].output_index, kbd_report.key_data[i].input_index);
+        std::string str = key_map_string(kbd_report.key_data[i].output_index, kbd_report.key_data[i].input_index);
+        std::cout << "Item: " << str << std::endl;
     }
     printf("\n\n");
 }
