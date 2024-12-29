@@ -1,0 +1,1 @@
+GEN_CSRCS += _shuidi_alpha_100x111.c
