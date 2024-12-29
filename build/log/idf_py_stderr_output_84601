@@ -1,7 +1,0 @@
-[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyACM0 115200[0m
-[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
-[0;33m--- 0x40378eb2: cpu_utility_ll_stall_cpu at /home/wzx/esp/v5.3.2/esp-idf/components/hal/esp32s3/include/hal/cpu_utility_ll.h:44
- (inlined by) esp_cpu_stall at /home/wzx/esp/v5.3.2/esp-idf/components/esp_hw_support/cpu.c:34
-[0m
-[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 9dade982b2911638c286d9d996965d3eb0f0a3f18709dae94161b19b53ba7fdc[0m
-[0m
