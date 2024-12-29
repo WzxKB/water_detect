@@ -28,7 +28,7 @@ void setup_scr_screen_2(lv_ui *ui)
 
     //Write codes screen_2_cont_1
     ui->screen_2_cont_1 = lv_obj_create(ui->screen_2);
-    lv_obj_set_pos(ui->screen_2_cont_1, 1, 0);
+    lv_obj_set_pos(ui->screen_2_cont_1, 0, 0);
     lv_obj_set_size(ui->screen_2_cont_1, 240, 240);
     lv_obj_set_scrollbar_mode(ui->screen_2_cont_1, LV_SCROLLBAR_MODE_OFF);
 
@@ -47,34 +47,11 @@ void setup_scr_screen_2(lv_ui *ui)
     lv_obj_set_style_pad_right(ui->screen_2_cont_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_shadow_width(ui->screen_2_cont_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-    //Write codes screen_2_label_1
-    ui->screen_2_label_1 = lv_label_create(ui->screen_2);
-    lv_label_set_text(ui->screen_2_label_1, "Water Level \nMonitoring System");
-    lv_label_set_long_mode(ui->screen_2_label_1, LV_LABEL_LONG_WRAP);
-    lv_obj_set_pos(ui->screen_2_label_1, 21, 30);
-    lv_obj_set_size(ui->screen_2_label_1, 193, 118);
-
-    //Write style for screen_2_label_1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-    lv_obj_set_style_border_width(ui->screen_2_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_radius(ui->screen_2_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_color(ui->screen_2_label_1, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->screen_2_label_1, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_opa(ui->screen_2_label_1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_letter_space(ui->screen_2_label_1, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_line_space(ui->screen_2_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_align(ui->screen_2_label_1, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui->screen_2_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_top(ui->screen_2_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_right(ui->screen_2_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_bottom(ui->screen_2_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_left(ui->screen_2_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_shadow_width(ui->screen_2_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-
     //Write codes screen_2_label_2
     ui->screen_2_label_2 = lv_label_create(ui->screen_2);
     lv_label_set_text(ui->screen_2_label_2, "---Wang Yu Xuan");
     lv_label_set_long_mode(ui->screen_2_label_2, LV_LABEL_LONG_WRAP);
-    lv_obj_set_pos(ui->screen_2_label_2, 121, 176);
+    lv_obj_set_pos(ui->screen_2_label_2, 12, 31);
     lv_obj_set_size(ui->screen_2_label_2, 110, 45);
 
     //Write style for screen_2_label_2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -99,7 +76,7 @@ void setup_scr_screen_2(lv_ui *ui)
     lv_img_set_src(ui->screen_2_img_1, &_shuidi_alpha_100x111);
     lv_img_set_pivot(ui->screen_2_img_1, 50,50);
     lv_img_set_angle(ui->screen_2_img_1, 0);
-    lv_obj_set_pos(ui->screen_2_img_1, 21, 76);
+    lv_obj_set_pos(ui->screen_2_img_1, 125, 109);
     lv_obj_set_size(ui->screen_2_img_1, 100, 111);
 
     //Write style for screen_2_img_1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.

@@ -42,10 +42,10 @@ void custom_init(lv_ui *ui)
 
 void my_timer1(lv_timer_t *timer)
 {
-    static int i = 0;
-    i++;
-    char buf[5];
-//     snprintf(buf, sizeof(buf), "%d", i);  // 格式化显示
-//     lv_label_set_text(guider_ui.screen_label_3, buf);  // 更新 Label 文本
+    // static int i = 0;
+    // i++;
+    // char buf[5];
+    // snprintf(buf, sizeof(buf), "%d", i);  // 格式化显示
+    // lv_label_set_text(guider_ui.screen_label_3, buf);  // 更新 Label 文本
 }
 

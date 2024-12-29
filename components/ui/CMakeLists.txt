@@ -19,7 +19,7 @@ idf_component_register(
     SRC_DIRS .
     SRCS ${srcs}
     INCLUDE_DIRS ${include_dirs}
-    PRIV_REQUIRES "lvgl" 
+    REQUIRES "lvgl" 
 )
 ## The purpose of opening this macro is to change the path of "lvgl/ lvgl.h" to "lvgl.h".
 target_compile_definitions(${COMPONENT_LIB} PRIVATE "LV_LVGL_H_INCLUDE_SIMPLE=1")

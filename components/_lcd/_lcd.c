@@ -120,5 +120,4 @@ void _lcd_init(void)
             .buff_spiram = true,
         }};
     disp_handle = lvgl_port_add_disp(&disp_cfg);
-    // app_main_display();
 }

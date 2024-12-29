@@ -32,15 +32,18 @@ extern "C" void app_main(void)
         ret = nvs_flash_init();
     }
     matriKeybord_init();
-    // /* Initialize SPI or I2C bus used by the drivers */
-    // _lcd_init();
-    // lv_init();
-    // setup_ui(&guider_ui);
+    /* Initialize SPI or I2C bus used by the drivers */
+    _lcd_init();
+    lv_init();
+    setup_ui(&guider_ui);
 
-    // while (1)
-    // {
-    //     /* Delay 1 tick (assumes FreeRTOS tick is 10ms */
-    //     vTaskDelay(pdMS_TO_TICKS(10));
-    //     lv_task_handler();
-    // }
+    while (1)
+    {
+        /* Delay 1 tick (assumes FreeRTOS tick is 10ms */
+        vTaskDelay(pdMS_TO_TICKS(1));
+        if (xSemaphoreTake(lvgl_mutex, portMAX_DELAY)) {
+        lv_task_handler();
+        xSemaphoreGive(lvgl_mutex); // 解锁
+        }
+    }
 }

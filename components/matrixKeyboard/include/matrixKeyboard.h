@@ -5,6 +5,7 @@
 extern "C"
 {
 #endif
+extern  SemaphoreHandle_t lvgl_mutex; // 声明互斥锁
     void matriKeybord_init(void);
     namespace wd
     {

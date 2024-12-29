@@ -51,7 +51,7 @@ void setup_scr_screen_1(lv_ui *ui)
     ui->screen_1_label_1 = lv_label_create(ui->screen_1);
     lv_label_set_text(ui->screen_1_label_1, "水位阈值设置：");
     lv_label_set_long_mode(ui->screen_1_label_1, LV_LABEL_LONG_WRAP);
-    lv_obj_set_pos(ui->screen_1_label_1, 5, 35);
+    lv_obj_set_pos(ui->screen_1_label_1, 20, 176);
     lv_obj_set_size(ui->screen_1_label_1, 172, 32);
 
     //Write style for screen_1_label_1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
