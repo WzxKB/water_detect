@@ -10,9 +10,9 @@
 #include "freertos/event_groups.h"
 #include "lvgl.h"
 #include "custom.h"
-#include "_lcd.h"
+#include "board_lcd.h"
 #include "gui_guider.h"
-#include "matrixKeyboard.h"
+#include "application.h"
 lv_ui guider_ui;
 #define DISP_BUF_SIZE 240 * 240
 using namespace std;
@@ -31,16 +31,15 @@ extern "C" void app_main(void)
         ESP_ERROR_CHECK(nvs_flash_erase());
         ret = nvs_flash_init();
     }
-    matriKeybord_init();
-    // /* Initialize SPI or I2C bus used by the drivers */
-    // _lcd_init();
-    // lv_init();
-    // setup_ui(&guider_ui);
-
-    // while (1)
-    // {
-    //     /* Delay 1 tick (assumes FreeRTOS tick is 10ms */
-    //     vTaskDelay(pdMS_TO_TICKS(10));
-    //     lv_task_handler();
-    // }
+    /* Initialize SPI or I2C bus used by the drivers */
+    _lcd_init();
+    lv_init();
+    setup_ui(&guider_ui);
+    Application::GetInstance().Start(&guider_ui);
+    while (1)
+    {
+        /* Delay 1 tick (assumes FreeRTOS tick is 10ms */
+        vTaskDelay(pdMS_TO_TICKS(10));
+        lv_task_handler();
+    }
 }

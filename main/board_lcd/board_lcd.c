@@ -9,7 +9,7 @@
 #include "esp_lcd_panel_ops.h"
 #include "esp_lvgl_port.h"
 #include "lvgl.h"
-#include "_lcd.h"
+#include "board_lcd.h"
 
 const char *TAG = "_LCD";
 
