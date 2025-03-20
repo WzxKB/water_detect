@@ -6,4 +6,4 @@ dependencies:
   lvgl/lvgl: ^8
   espressif/led_indicator: ^1.0.0
 
-  espressif/keyboard_button: =*
+  espressif/keyboard_button: ^1.0.0
